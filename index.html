@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>60 Receitas Low Carb com Ovo - Lumina Book</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0F0F1E 0%, #1A1A2E 100%);
+            color: #F5F5F0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(201, 168, 106, 0.2);
+            padding: 1.2rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #C9A86A;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(45deg);
+            background: rgba(201, 168, 106, 0.1);
+        }
+
+        .logo-icon svg {
+            transform: rotate(-45deg);
+            width: 20px;
+            height: 20px;
+            stroke: #C9A86A;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .logo-text-name {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #E8DCC4;
+            letter-spacing: 0.1em;
+            line-height: 1;
+        }
+
+        .logo-text-sub {
+            font-size: 0.6rem;
+            letter-spacing: 0.25em;
+            color: #C9A86A;
+            font-weight: 500;
+        }
+
+        .cta-header {
+            padding: 0.8rem 1.8rem;
+            background: linear-gradient(135deg, #C9A86A 0%, #B89858 100%);
+            color: #1A1A2E;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-header:hover {
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 10rem 2rem 4rem;
+            position: relative;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #C9A86A;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .hero-title {
+            font-size: 3.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #C9A86A 0%, #E8DCC4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-description {
+            font-size: 1.15rem;
+            color: #E8DCC4;
+            opacity: 0.9;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .hero-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .hero-features li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+            color: #E8DCC4;
+        }
+
+        .checkmark {
+            width: 24px;
+            height: 24px;
+            background: #C9A86A;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1A1A2E;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+
+        .price-box {
+            background: rgba(201, 168, 106, 0.1);
+            border: 2px solid #C9A86A;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .price-old {
+            text-decoration: line-through;
+            color: #E8DCC4;
+            opacity: 0.6;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-new {
+            font-size: 2.8rem;
+            color: #C9A86A;
+            font-weight: 700;
+            margin: 0.5rem 0;
+        }
+
+        .price-installment {
+            color: #E8DCC4;
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 1.3rem 2rem;
+            background: linear-gradient(135deg, #C9A86A 0%, #B89858 100%);
+            color: #1A1A2E;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(201, 168, 106, 0.3);
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(201, 168, 106, 0.5);
+        }
+
+        .guarantee {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 1rem;
+            color: #C9A86A;
+            font-size: 0.9rem;
+        }
+
+        .book-mockup {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .book-cover {
+            width: 100%;
+            max-width: 380px;
+            aspect-ratio: 2/3;
+            background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .book-header {
+            color: white;
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .book-badge {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 0 auto 1.5rem;
+            text-align: center;
+        }
+
+        .book-title {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.3;
+            margin: 2rem 0;
+        }
+
+        .book-author {
+            color: white;
+            font-size: 1.1rem;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .section {
+            padding: 5rem 2rem;
+        }
+
+        .section-alt {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #C9A86A;
+            margin-bottom: 0.8rem;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #E8DCC4;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(201, 168, 106, 0.2);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            border-color: #C9A86A;
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            color: #C9A86A;
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .benefit-card p {
+            color: #E8DCC4;
+            opacity: 0.85;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .recipes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .recipe-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(201, 168, 106, 0.2);
+            border-radius: 12px;
+            padding: 1.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+            border-color: #C9A86A;
+        }
+
+        .recipe-number {
+            color: #C9A86A;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .recipe-card h4 {
+            color: #E8DCC4;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .recipe-card p {
+            color: #E8DCC4;
+            opacity: 0.8;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .recipe-meta {
+            display: flex;
+            gap: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(201, 168, 106, 0.2);
+            font-size: 0.85rem;
+            color: #C9A86A;
+        }
+
+        .bonus-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .bonus-card {
+            background: linear-gradient(135deg, rgba(201, 168, 106, 0.1) 0%, rgba(201, 168, 106, 0.05) 100%);
+            border: 2px solid #C9A86A;
+            border-radius: 16px;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .bonus-icon {
+            font-size: 3.5rem;
+        }
+
+        .bonus-content h3 {
+            color: #C9A86A;
+            font-size: 1.6rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .bonus-content p {
+            color: #E8DCC4;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(201, 168, 106, 0.2);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .stars {
+            color: #C9A86A;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            color: #E8DCC4;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            color: #C9A86A;
+            font-weight: 600;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(201, 168, 106, 0.2);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            color: #C9A86A;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(201, 168, 106, 0.05);
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: #E8DCC4;
+            line-height: 1.7;
+            opacity: 0.9;
+            display: none;
+        }
+
+        .cta-box {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.03);
+            border: 2px solid #C9A86A;
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            font-size: 2.2rem;
+            color: #C9A86A;
+            margin-bottom: 1rem;
+        }
+
+        .cta-box-desc {
+            font-size: 1.1rem;
+            color: #E8DCC4;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .cta-footer-text {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        footer {
+            background: rgba(15, 15, 30, 0.8);
+            border-top: 1px solid rgba(201, 168, 106, 0.2);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            color: #E8DCC4;
+            opacity: 0.7;
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .hero {
+                padding: 8rem 1.5rem 3rem;
+            }
+
+            .section {
+                padding: 3rem 1.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .bonus-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .cta-header {
+                font-size: 0.8rem;
+                padding: 0.7rem 1.5rem;
+            }
+
+            nav {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .price-new {
+                font-size: 2.2rem;
+            }
+
+            .benefits-grid,
+            .recipes-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                </div>
+                <div>
+                    <div class="logo-text-name">LUMINA</div>
+                    <div class="logo-text-sub">BOOK</div>
+                </div>
+            </div>
+            <a href="https://mpago.la/1r3h95t" class="cta-header">QUERO MEU EBOOK</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div>
+                <div class="hero-subtitle">✨ Lançamento Exclusivo</div>
+                <h1 class="hero-title">60 Maneiras de Comer Ovo Low Carb</h1>
+                <p class="hero-description">
+                    Transforme o ovo no seu maior aliado para ganhar músculo e perder gordura. Receitas práticas, rápidas e deliciosas para quem treina e não quer cair na monotonia.
+                </p>
+                <ul class="hero-features">
+                    <li><span class="checkmark">✓</span>60 receitas low carb testadas e aprovadas</li>
+                    <li><span class="checkmark">✓</span>Preparos de 5 a 15 minutos cada</li>
+                    <li><span class="checkmark">✓</span>Ingredientes acessíveis e fáceis de encontrar</li>
+                    <li><span class="checkmark">✓</span>Perfeito para quem treina e busca proteína</li>
+                    <li><span class="checkmark">✓</span>Receitas individuais prontas para o dia a dia</li>
+                </ul>
+                <div class="price-box">
+                    <div class="price-old">De R$ 97,00</div>
+                    <div class="price-new">R$ 47,00</div>
+                    <div class="price-installment">no PIX</div>
+                </div>
+                <a href="https://mpago.la/1r3h95t" class="cta-button">GARANTIR MINHA CÓPIA AGORA</a>
+                
+            </div>
+            <div class="book-mockup">
+                <img src="https://cdn.jsdelivr.net/gh/LuminaBooks/ovo-low-carb-60-receitas-faceis-de-fazer@main/Capa%20Ebook%20Receitas%20Low%20Carb%20Verde.png" alt="Capa do eBook 60 Receitas Low Carb com Ovo" class="book-cover">
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-title">
+                <h2>Por Que Este eBook Vai Mudar Sua Alimentação</h2>
+                <p>Descubra os benefícios de ter 60 receitas low carb sempre à mão</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Praticidade Extrema</h3>
+                    <p>Todas as receitas são individuais e levam entre 5 a 15 minutos. Perfeito para quem tem rotina corrida.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💪</div>
+                    <h3>Foco em Proteína</h3>
+                    <p>Desenvolvido para quem treina e precisa de proteína de qualidade sem cair na monotonia alimentar.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Economia Real</h3>
+                    <p>Ingredientes acessíveis e fáceis de encontrar. Economize sem abrir mão da qualidade.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Zero Carboidrato</h3>
+                    <p>Todas as receitas são low carb de verdade, usando técnicas inteligentes para reduzir carboidratos.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Constância Alimentar</h3>
+                    <p>Variedade que mantém você motivado e consistente na dieta, essencial para resultados.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📱</div>
+                    <h3>Acesso Imediato</h3>
+                    <p>Receba o eBook instantaneamente no seu email e consulte de qualquer dispositivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Conheça Algumas das 60 Receitas</h2>
+                <p>Do básico ao sofisticado, sempre low carb e delicioso</p>
+            </div>
+            <div class="recipes-grid">
+                <div class="recipe-card">
+                    <div class="recipe-number">RECEITA #01</div>
+                    <h4>Ovo Mexido Caprichado com Cebola e Tomate</h4>
+                    <p>Café da manhã leve e revigorante com tomate sem sementes e cebola refogada.</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 8 min</span>
+                        <span>🍽️ 1 porção</span>
+                    </div>
+                </div>
+                <div class="recipe-card">
+                    <div class="recipe-number">RECEITA #02</div>
+                    <h4>Ovo Frito Perfeito com Queijo Coalho</h4>
+                    <p>Lanche rápido com crocância extra do queijo coalho grelhado, zero carboidrato.</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 10 min</span>
+                        <span>🍽️ 1 porção</span>
+                    </div>
+                </div>
+                <div class="recipe-card">
+                    <div class="recipe-number">RECEITA #06</div>
+                    <h4>Ovo Mexido com Alho e Bacon</h4>
+                    <p>Intensidade defumada perfeita para jantar rápido que aquece e nutre.</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 12 min</span>
+                        <span>🍽️ 1 porção</span>
+                    </div>
+                </div>
+                <div class="recipe-card">
+                    <div class="recipe-number">RECEITA #09</div>
+                    <h4>Omelete Caprese Low Carb</h4>
+                    <p>Tomates cereja suculentos e manjericão fresco com muçarela derretida.</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 10 min</span>
+                        <span>🍽️ 1 porção</span>
+                    </div>
+                </div>
+                <div class="recipe-card">
+                    <div class="recipe-number">RECEITA #15</div>
+                    <h4>Ovo Frito com Couve Crispy e Alho</h4>
+                    <p>Couve transformada em chips dourados e crocantes, rústico e irresistível.</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 9 min</span>
+                        <span>🍽️ 1 porção</span>
+                    </div>
+                </div>
+                <div class="recipe-card">
+                    <div class="recipe-number">RECEITA #20</div>
+                    <h4>Omelete de Espinafre com Queijo Coalho</h4>
+                    <p>Fusão rústica e nutritiva que equilibra frescor vegetal com toques salgados.</p>
+                    <div class="recipe-meta">
+                        <span>⏱️ 12 min</span>
+                        <span>🍽️ 1 porção</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-title">
+                <h2>Bônus Exclusivos Inclusos</h2>
+                <p>Conteúdo extra para potencializar seus resultados</p>
+            </div>
+            <div class="bonus-grid">
+                <div class="bonus-card">
+                    <div class="bonus-icon">📖</div>
+                    <div class="bonus-content">
+                        <h3>Guia de Segredos Low Carb</h3>
+                        <p>Cada receita vem com o "segredo" revelado - técnicas especiais para reduzir carboidratos e aumentar sabor sem complicação.</p>
+                    </div>
+                </div>
+                <div class="bonus-card">
+                    <div class="bonus-icon">⏰</div>
+                    <div class="bonus-content">
+                        <h3>Índice de Tempo de Preparo</h3>
+                        <p>Organize suas refeições por tempo disponível - encontre rapidamente receitas de 5, 10 ou 15 minutos.</p>
+                    </div>
+                </div>
+                <div class="bonus-card">
+                    <div class="bonus-icon">🎨</div>
+                    <div class="bonus-content">
+                        <h3>Categorias por Estilo</h3>
+                        <p>Essenciais, Doces e Vegetais - navegue pelas receitas de acordo com suas preferências e necessidades nutricionais.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>O Que Quem Já Tem Está Dizendo</h2>
+                <p>Depoimentos reais de pessoas que transformaram sua alimentação</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Achei que dieta low carb era complicada, mas essas receitas provaram o contrário. Ingredientes simples e resultados incríveis!"
+                    </p>
+                    <div class="testimonial-author">— Ana Paula, Nutricionista</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                 <p class="testimonial-text">
+                        "Finalmente consegui manter a consistência na dieta! As receitas são tão simples que faço todos os dias sem desculpa. Já eliminei 5kg em 6 semanas."
+                    </p>
+                    <div class="testimonial-author">— Marina Silva, Personal Trainer</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Como atleta, preciso de praticidade e proteína. Este ebook resolveu meu problema! Receitas rápidas que cabem na minha rotina de treinos."
+                    </p>
+                    <div class="testimonial-author">— Carlos Eduardo, Crossfitter</div>
+                </div>
+                
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-title">
+                <h2>Perguntas Frequentes</h2>
+                <p>Tire suas dúvidas antes de garantir seu ebook</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Como tenho acesso ao material?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Após a confirmação do pagamento, você ganha acesso exclusivo ao livro digital da Lumina Books em uma plataforma online que simula a experiência de um livro físico, com navegação fluida, páginas organizadas e leitura confortável em qualquer dispositivo. O acesso é via navegador, sem downloads ou apps, garantindo praticidade, segurança e ótima experiência.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>As receitas são realmente rápidas?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Sim! Todas as receitas levam entre 5 a 15 minutos para ficarem prontas. Foram pensadas para quem tem rotina corrida e precisa de praticidade sem perder qualidade nutricional.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Preciso de ingredientes caros ou difíceis?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Não! Todas as receitas usam ingredientes acessíveis e fáceis de encontrar em qualquer supermercado. O foco é na praticidade e economia real.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Funciona para quem treina pesado?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Com certeza! O ebook foi desenvolvido pensando em quem treina e precisa de proteína de qualidade no dia a dia. As receitas são ricas em proteína e baixas em carboidratos.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Posso usar em qualquer fase da dieta?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Sim! As receitas são low carb e se adaptam a diferentes objetivos: emagrecimento, ganho de massa muscular ou manutenção. Você escolhe as quantidades de acordo com sua meta.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="comprar">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Comece Hoje Sua Transformação</h2>
+                <p class="cta-box-desc">
+                    Não deixe para depois o que pode mudar sua vida agora. Tenha acesso imediato a 60 receitas low carb que vão revolucionar sua alimentação e acelerar seus resultados.
+                </p>
+                <div class="price-box">
+                    <div class="price-old">De R$ 97,00 por apenas</div>
+                    <div class="price-new">R$ 47,00</div>
+                    <div class="price-installment">no PIX</div>
+                </div>
+                <a href="https://mpago.la/1r3h95t" class="cta-button">
+                    GARANTIR ACESSO IMEDIATO
+                </a>
+                
+                <p class="cta-footer-text">
+                    ⚡ Oferta por tempo limitado • 🔒 Pagamento 100% seguro • 📱 Acesso instantâneo
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo" style="justify-content: center; margin-bottom: 1.5rem;">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                </div>
+                <div>
+                    <div class="logo-text-name">LUMINA</div>
+                    <div class="logo-text-sub">BOOK</div>
+                </div>
+            </div>
+            <p>&copy; 2026 Lumina Book. Todos os direitos reservados.</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">
+                Este produto não substitui orientação de profissionais de saúde.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const item = this.parentElement;
+                const answer = this.nextElementSibling;
+                const toggle = this.querySelector('.faq-toggle');
+                
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.querySelector('.faq-answer').style.display = 'none';
+                        otherItem.querySelector('.faq-toggle').textContent = '+';
+                    }
+                });
+                
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    toggle.textContent = '+';
+                } else {
+                    answer.style.display = 'block';
+                    toggle.textContent = '−';
+                }
+            });
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.benefit-card, .recipe-card, .testimonial-card, .bonus-card, .faq-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html></div>
+                   
